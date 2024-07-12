@@ -87,6 +87,7 @@ jobs:
           -DLAF_BACKEND=$laf_backend \
           -DSKIA_DIR=skia \
           -DSKIA_LIBRARY_DIR=skia/out/Release-$skia_arch
+          -DSKIA_LIBRARY=./skia/out/Release-$skia_arch/skia.lib
     - name: Compiling
       shell: bash
       run: |
