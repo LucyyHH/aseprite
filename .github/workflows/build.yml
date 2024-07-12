@@ -11,7 +11,7 @@ jobs:
         #ui: [gui, cli]
         #scripting: [lua, noscripts]
         enable_ui: [on]
-        exclude:
+        include:
           - os: windows-latest
             build_type: Release
             enable_ui: on
