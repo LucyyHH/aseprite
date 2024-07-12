@@ -113,10 +113,10 @@ jobs:
         cd tests
         $XVFB bash run-tests.sh
         
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: aseprite
         path: |
-          D:/a/aseprite/aseprite/build/bin/libcrypto-1_1-x64.dll
-          D:/a/aseprite/aseprite/build/bin/data
-          D:/a/aseprite/aseprite/build/bin/aseprite.exe
+          libcrypto-1_1-x64.dll
+          D:/a/aseprite/aseprite-${{ matrix.os }}-${{ matrix.build_type }}-${{ matrix.ui }}-${{ matrix.scripting }}/build/bin/data
+          D:/a/aseprite/aseprite-${{ matrix.os }}-${{ matrix.build_type }}-${{ matrix.ui }}-${{ matrix.scripting }}/build/bin/aseprite.exe
